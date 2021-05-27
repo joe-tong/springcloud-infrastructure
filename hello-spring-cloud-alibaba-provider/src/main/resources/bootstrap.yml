@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: provider
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848 # 配置中心nacos的地址
+        file-extension: yaml # 配置文件后缀（格式）
+        group: DEFAULT_GROUP # 分组名称
+        namespace: ${spring.profiles.active} # 命令空间，可以用来区分不同的环境
+      discovery:
+        server-addr: 127.0.0.1:8848 # 服务发现地址nacos的地
+        namespace: ${spring.profiles.active}
