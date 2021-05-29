@@ -1984,3 +1984,4 @@ management:
 ```
 
 运行成功后即可在控制台接收到消息：`Receive input: Hello RocketMQ`
+
