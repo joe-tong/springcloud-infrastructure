@@ -13,8 +13,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
 
-server:
-  port: 9967
+
 
 # 数据源 cloud-db-0,cloud-db-1
 sharding:
@@ -58,5 +57,6 @@ sharding:
         sql:
           show: true
 
-
+server:
+  port: 9967
 

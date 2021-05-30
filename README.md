@@ -1985,3 +1985,10 @@ management:
 
 运行成功后即可在控制台接收到消息：`Receive input: Hello RocketMQ`
 
+
+
+## ShardingSphere
+
+### 1.分库分表
+
+### 2.读写分离（前提搭建mysql主从复制）

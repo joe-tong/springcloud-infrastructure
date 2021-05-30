@@ -10,10 +10,10 @@
         <relativePath>../hello-spring-cloud-alibaba-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-stream-shardingsphere</artifactId>
+    <artifactId>hello-spring-cloud-stream-shardingsphere-separate-read-write</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-spring-cloud-stream-shardingsphere</name>
+    <name>hello-spring-cloud-stream-shardingsphere-separate-read-write</name>
 
     <dependencies>
         <!-- Spring Boot Begin -->

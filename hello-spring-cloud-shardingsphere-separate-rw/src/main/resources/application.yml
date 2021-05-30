@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: spring-cloud-shardings-rw
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: ${spring.profiles.active}
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+server:
+  port: 9968
+
+# 数据源 cloud-db-0,cloud-db-1
+sharding:
+  jdbc:
+    datasource:
+      names: cloud-sharding,cloud-sharding-slave
+    # 第一个数据库
+      cloud-sharding:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3306/cloud-sharding?characterEncoding=utf-8&&serverTimezone=GMT%2B8
+        username: root
+        password: root
+    # 第二个数据库
+      cloud-sharding-slave:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://localhost:3307/cloud-sharding?characterEncoding=utf-8&&serverTimezone=GMT%2B8
+        username: root
+        password: root
+    # 配置读写分离
+    # 配置从库选择策略，提供轮询与随机，这里选择用轮询
+    config:
+      masterslave:
+        load-balance-algorithm-type: round_robin
+        name: ms
+        master-data-source-name: cloud-sharding
+        slave-data-source-names: cloud-sharding-slave
+      # 打印执行的数据库以及语句
+      props:
+        sql:
+          show: true
+
+
+
