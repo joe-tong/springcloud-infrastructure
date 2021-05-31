@@ -1989,6 +1989,12 @@ management:
 
 ## ShardingSphere
 
-### 1.分库分表
+### 1.分库分表(hello-spring-cloud-shardingsphere)
 
-### 2.读写分离（前提搭建mysql主从复制）
+### 2.读写分离（前提搭建mysql主从复制)(hello-spring-cloud-shardingsphere-separate-rw)
+
+## Redis
+
+#### 1.布隆过滤器
+
+#### 2.zset+score 实现延迟队列
