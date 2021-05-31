@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: spring-cloud-redis
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  main:
+    allow-bean-definition-overriding: true
+  # Redis数据库索引（默认为0）
+  redis:
+   database: 0
+   host: localhost
+   port: 6379
+   password: 123456
+   timeout: 1000
+
+
+
+server:
+  port: 9966
+

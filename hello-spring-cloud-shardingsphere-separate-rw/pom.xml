@@ -73,7 +73,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>cn.mirrorming.hello.spring.cloud.stream.SpringCloudStreamApplication</mainClass>
+                    <mainClass>cn.mirrorming.hello.spring.cloud.redis.SpringCloudStreamApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
