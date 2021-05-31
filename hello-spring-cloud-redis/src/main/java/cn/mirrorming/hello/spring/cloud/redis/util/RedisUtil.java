@@ -1,6 +1,7 @@
 package cn.mirrorming.hello.spring.cloud.redis.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Component;
@@ -821,6 +822,7 @@ public final class RedisUtil {
                                                                           double min, double max, long start, long end) {
         return redisTemplate.opsForZSet().rangeByScoreWithScores(key, min, max, start, end);
     }
+
     /**
      * 该命令除了排序方式是基于从高到低的分数排序之外，其它功能和参数含义均与ZRANGEBYSCORE相同。
      * 需要注意的是该命令中的min和max参数的顺序和ZRANGEBYSCORE命令是相反的。
@@ -835,5 +837,25 @@ public final class RedisUtil {
             return null;
         }
         return redisTemplate.opsForZSet().reverseRangeByScore(key, min, max);
+    }
+
+    /**
+     * 设置 HyperLogLong 的 key 值
+     *
+     * @param key
+     * @param value
+     */
+    public Long pfadd(String key, String value) {
+        return redisTemplate.execute((RedisCallback<Long>) con -> con.pfAdd(key.getBytes(), value.getBytes()));
+    }
+
+    /**
+     * 获取HyperLogLong 数量
+     *
+     * @param key
+     * @return
+     */
+    public Long pfCount(String key) {
+        return redisTemplate.execute((RedisCallback<Long>) con -> con.pfCount(key.getBytes()));
     }
 }
