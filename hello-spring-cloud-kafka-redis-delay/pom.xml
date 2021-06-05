@@ -10,10 +10,10 @@
         <relativePath>../hello-spring-cloud-alibaba-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-redis</artifactId>
+    <artifactId>hello-spring-cloud-kafka-redis</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-spring-cloud-redis</name>
+    <name>hello-spring-cloud-kafka-redis</name>
 
 
     <dependencies>
@@ -46,9 +46,8 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.redisson</groupId>
-            <artifactId>redisson</artifactId>
-            <version>3.8.2</version>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
         </dependency>
         <!-- Spring Cloud End -->
     </dependencies>
@@ -59,7 +58,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>cn.mirrorming.hello.spring.cloud.redis.SpringCloudRedisApplication`</mainClass>
+                    <mainClass>cn.mirrorming.hello.spring.cloud.redis.SpringCloudRedisApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

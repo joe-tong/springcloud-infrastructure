@@ -1993,12 +1993,14 @@ management:
 
 ### 2.读写分离（前提搭建mysql主从复制)(hello-spring-cloud-shardingsphere-separate-rw)
 
-## Redis
+## Redis（hello-spring-cloud-redis）
 
-#### 1.布隆过滤器
+### 1.布隆过滤器
 
-#### 2.zset+score 实现延迟队列
+### 2.zset+score 实现延迟队列
 
-#### 3.HyperLog进行统计一个页面访问的IP访问次数
+### 3.HyperLog进行统计一个页面访问的IP访问次数
 
-#### 4.GEO实现某个位置附近的城市
+### 4.GEO实现某个位置附近的城市
+
+### 5.redission分布式锁
