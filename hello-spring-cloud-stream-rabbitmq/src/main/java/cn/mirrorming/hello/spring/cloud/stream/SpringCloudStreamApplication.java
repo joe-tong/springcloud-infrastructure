@@ -7,10 +7,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
 
-/**
- * @author mirror
- */
-
 @Slf4j
 @SpringBootApplication
 @EnableDiscoveryClient

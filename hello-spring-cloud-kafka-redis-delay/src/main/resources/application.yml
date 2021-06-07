@@ -16,7 +16,7 @@ spring:
    timeout: 1000
 
   kafka:
-    bootstrap-servers: 172.18.160.192:9092
+    bootstrap-servers: 172.100.100.61:9092
     producer:
       # 发生错误后，消息重发的次数。
       retries: 0
