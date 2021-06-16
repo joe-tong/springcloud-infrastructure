@@ -20,6 +20,7 @@ public class RedissonConfig {
         String redisUrl = String.format("redis://%s:%s",redisProperties.getHost()+"",redisProperties.getPort()+"");
         config.useSingleServer().setAddress(redisUrl).setPassword(redisProperties.getPassword());
         config.useSingleServer().setDatabase(3);
+        config.useSingleServer().setConnectionMinimumIdleSize(10);
         return Redisson.create(config);
     }
 

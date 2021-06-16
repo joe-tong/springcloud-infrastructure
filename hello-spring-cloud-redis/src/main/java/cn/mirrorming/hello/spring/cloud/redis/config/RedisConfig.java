@@ -63,6 +63,7 @@ public class RedisConfig {
             throws UnknownHostException {
         StringRedisTemplate template = new StringRedisTemplate();
         template.setConnectionFactory(redisConnectionFactory);
+        template.setEnableTransactionSupport(true); //打开事务支持
         return template;
     }
 }

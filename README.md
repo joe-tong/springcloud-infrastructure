@@ -2004,3 +2004,5 @@ management:
 ### 4.GEO实现某个位置附近的城市
 
 ### 5.redission分布式锁
+
+### 6.实现CAS（事物或者Lua脚本）
