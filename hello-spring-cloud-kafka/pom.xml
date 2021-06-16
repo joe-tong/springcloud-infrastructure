@@ -10,10 +10,10 @@
         <relativePath>../hello-spring-cloud-alibaba-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-kafka-redis</artifactId>
+    <artifactId>hello-spring-cloud-kafka</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-spring-cloud-kafka-redis</name>
+    <name>hello-spring-cloud-kafka</name>
 
 
     <dependencies>
